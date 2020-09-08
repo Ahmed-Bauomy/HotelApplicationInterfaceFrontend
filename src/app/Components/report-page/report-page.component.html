@@ -1,0 +1,16 @@
+<h1 class="text-center">Hotel Branches</h1>
+<div class="row col-12" style="justify-content: space-around;margin: 5px auto;">
+  <div [ngClass]="{loadingClass:Loading}" ></div>
+<div class="card col-12 col-md-4 col-lg-3 m-1" *ngFor="let item of this.AllBranches">
+  <div class="card-header text-center" style="height: 30vh;" >
+    <img [src]="item.BranchImagePath" width="50%" height="50%" alt="Hotel Branch"/>
+  </div>
+  <div class="card-body text-center">
+    Branch Name: {{item.Name}} <br>
+    Branch Location: {{item.Location}}<br>
+  </div>
+  <div class="card-footer" style="text-align: center;">
+    <a class="btn btn-success"  [routerLink]="['/Rooms',item.BranchId]">Branch Rooms</a> 
+  </div>
+</div>
+</div>
