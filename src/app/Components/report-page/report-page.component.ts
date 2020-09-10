@@ -25,7 +25,7 @@ export class ReportPageComponent implements OnInit {
   },
   (err)=>{
    this.Loading=false;
-  this._router.navigate(["/Error"]);
+   this._router.navigate(["/Error"]);
   }
 );
  }

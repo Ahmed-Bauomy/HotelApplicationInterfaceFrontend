@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
        this.TokenParams=data;
        this._userService.TokenDataOfService=this.TokenParams;
        sessionStorage.setItem("AccessToken",JSON.stringify( this.TokenParams));
-       this._router.navigate(["/Home"]);
+       this._router.navigate([""]);
     
       },
      (err)=>{

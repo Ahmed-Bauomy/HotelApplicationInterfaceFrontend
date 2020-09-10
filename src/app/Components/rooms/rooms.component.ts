@@ -1,3 +1,4 @@
+import { UserService } from './../../Services/user.service';
 import { IRoom } from 'src/app/ViewModels/Interfaces/iroom';
 import { BookingInfo } from './../../ViewModels/Interfaces/booking-info';
 import { RoomsService } from 'src/app/Services/rooms.service';
@@ -32,6 +33,7 @@ export class RoomsComponent implements OnInit {
   checkAvailableRooms(){
     this.bookingInfo.BranchId=this.Id;
     this.Loading=true;
+    console.log(this.bookingInfo);
     this._RoomService.getAvailableRooms(this.bookingInfo).subscribe(
     (data)=>{
       this.Loading=false;
@@ -43,5 +45,8 @@ export class RoomsComponent implements OnInit {
      //this._router.navigate(["/Error"]);
     }
   );
+  }
+  ReserveRoom(){
+
   }
 }
